@@ -1,12 +1,10 @@
 import { readFileSync } from "fs";
 import { resolve } from "path";
-import { AppLocale } from "./config";
 
-export const loadMessages = async (locale: AppLocale) => {
+export const loadMessages = (locale: string) => {
   try {
-    const filePath = resolve(process.cwd(), `src/messages/${locale}.json`);
-    const content = readFileSync(filePath, "utf-8");
-    return JSON.parse(content);
+    const path = resolve(process.cwd(), `messages/${locale}.json`);
+    return JSON.parse(readFileSync(path, "utf-8"));
   } catch (e) {
     console.error("loadMessages error:", e);
     throw e;

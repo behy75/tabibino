@@ -6,7 +6,7 @@ export default getRequestConfig(async ({ requestLocale }: GetRequestConfigParams
 
   const locale = requested && locales.includes(requested) ? requested : defaultLocale;
 
-  const messages = (await import(`@/messages/${locale}.json`)).default;
+  const messages = (await import(`../../../messages/${locale}.json`)).default;
 
   return { locale, messages };
 });

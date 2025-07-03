@@ -1,9 +1,10 @@
 [build]
-  command = "next build"
+  command = "yarn build"
   publish = ".next"
+  functions = "netlify/functions"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
 [functions]
-  node_bundler = "esbuild"
+  included_files = ["messages/fa.json", "messages/en.json"]
