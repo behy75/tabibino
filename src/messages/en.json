@@ -1,0 +1,41 @@
+{
+  "home": {
+    "title": "Welcome to Tabibino"
+  },
+  "auth": {
+    "error": {
+      "message": "Login failed. Please try again."
+    },
+    "login": {
+      "email": "Email",
+      "password": "Password",
+      "submit": "Login"
+    }
+  },
+  "admin": {
+    "welcome": "Welcome, {name} ({role})",
+    "panelTitle": "🛠️ Admin Panel"
+  },
+  "doctor": {
+    "welcome": "Welcome, {name} ({role})",
+    "panelTitle": "🛠️ Doctor Panel"
+  },
+  "patient": {
+    "welcome": "Welcome, {name} ({role})",
+    "panelTitle": "🛠️ Patient Panel"
+  },
+  "common": {
+    "title": "tabibino App",
+    "logout": "Sgin Out",
+    "login": "Sgin In",
+    "panel": "Dashboard",
+    "language": {
+      "fa": "🇮🇷 Persian",
+      "en": "🇬🇧 English"
+    },
+    "theme": {
+      "light": "Light",
+      "dark": "Dark"
+    }
+  }
+}
