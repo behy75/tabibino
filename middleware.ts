@@ -19,6 +19,13 @@ export async function middleware(req: NextRequest) {
   const pathname = req.nextUrl.pathname;
   const locale = req.nextUrl.locale;
 
+  if (pathname === '/') {
+    const cookieLocale = req.cookies.get('NEXT_LOCALE')?.value;
+    const targetLocale = cookieLocale || defaultLocale;
+
+    return NextResponse.redirect(new URL(`/${targetLocale}`, req.url));
+  }
+
   const publicRoutes = [
     `/${locale}/login`,
     `/${locale}/register`,
@@ -38,9 +45,7 @@ export async function middleware(req: NextRequest) {
       console.log("PATH:", pathname, "ROLE:", token?.role);
 
       if (!token || token.role !== protectedRoutes[route]) {
-        return NextResponse.redirect(
-          new URL(`/${locale}/login`, req.url)
-        );
+        return NextResponse.redirect(new URL(`/${locale}/login`, req.url));
       }
     }
   }
@@ -49,7 +54,5 @@ export async function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: [
-    '/((?!_next|favicon.ico|api|.*\\..*).*)',
-  ],
+  matcher: ['/((?!_next|favicon.ico|api|.*\\..*).*)'],
 };
