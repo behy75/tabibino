@@ -6,4 +6,8 @@ export default {
   locales,
   defaultLocale,
   localePrefix,
+  messages: {
+    en: () => import('./src/messages/en.json'),
+    fa: () => import('./src/messages/fa.json'),
+  },
 };
