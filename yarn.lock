@@ -363,6 +363,11 @@
     "@emnapi/runtime" "^1.4.3"
     "@tybys/wasm-util" "^0.9.0"
 
+"@netlify/next@^1.4.9":
+  version "1.4.9"
+  resolved "https://registry.npmjs.org/@netlify/next/-/next-1.4.9.tgz#50e7bc72f9c5897ffdf1ec10d585a1a3ea15048a"
+  integrity sha512-lrbY+CEhS9x0jV7oXVYi/rqxZ6ht5KeLGNZsgIPI34kpDaBuD/EfsyKa28BWeSrFalxRZmkMxQYRSTa82v3roQ==
+
 "@next/env@15.3.4":
   version "15.3.4"
   resolved "https://registry.npmjs.org/@next/env/-/env-15.3.4.tgz#5b41485596d5bfea0918db73f90b7a6db734da3f"
