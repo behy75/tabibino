@@ -5,6 +5,8 @@ export const loadMessages = async (locale: AppLocale) => {
   try {
     return (await import(`@/messages/${locale}.json`)).default;
   } catch (e) {
+    console.log(e);
+
     notFound();
   }
 };

@@ -15,5 +15,5 @@ export const useLoginRedirect = (trigger: boolean) => {
       if (!role || !(role in roleMap)) return;
       router.replace(`/${locale}/${roleMap[role]}`);
     }
-  }, [trigger, status, session]);
+  }, [trigger, status, session, locale, router]);
 };

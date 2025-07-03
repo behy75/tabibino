@@ -1,10 +1,12 @@
-import { credentials, User } from "../constants/mock-users.constant";
+import { credentials } from "../constants/mock-users.constant";
+import { UserDto } from "../models/dto/user.Dto";
 
 export function findUserByCredentials(
   email?: string,
   password?: string
-): User | null {
-  return credentials.find(
-    (u) => u.email === email && u.password === password
-  ) || null;
+): UserDto | null {
+  return (
+    credentials.find((u) => u.email === email && u.password === password) ||
+    null
+  );
 }

@@ -1,6 +1,7 @@
 import CredentialsProvider from "next-auth/providers/credentials";
-import { type NextAuthOptions } from "next-auth";
 import { findUserByCredentials } from "./credentials.utils";
+import { UserDto } from "../models/dto/user.Dto";
+import { NextAuthOptions } from "next-auth";
 
 export const authOptions: NextAuthOptions = {
   providers: [
@@ -18,7 +19,7 @@ export const authOptions: NextAuthOptions = {
   callbacks: {
     async jwt({ token, user }) {
       if (user) {
-        token.role = (user as any).role;
+        token.role = (user as UserDto).role;
       }
       return token;
     },

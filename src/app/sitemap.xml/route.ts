@@ -1,15 +1,12 @@
-import { type MetadataRoute } from 'next';
+// app/sitemap.xml/route.ts
+
+// ✅ This tells Next.js to treat this as static (compatible with `next export`)
+export const dynamic = 'force-static';
 
 export async function GET(): Promise<Response> {
   const baseUrl = "https://tabibino.com";
 
-  const staticRoutes = [
-    "",
-    "/login",
-    "/doctors",
-    "/about",
-  ];
-
+  const staticRoutes = ["", "/login", "/doctors", "/about"];
   const locales = ["en", "fa"];
 
   const allRoutes = locales.flatMap((locale) =>

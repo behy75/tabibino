@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, type ReactNode } from "react";
+import { useState, useEffect } from "react";
 import { ThemeDto } from "../models/dto/theme.dto";
 import { getInitialTheme } from "../utils/get-initial-theme.utils";
 import { applyThemeToDOM } from "../utils/apply-theme-to-dom.utils";

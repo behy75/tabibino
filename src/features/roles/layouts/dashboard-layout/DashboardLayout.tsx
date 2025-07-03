@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { IDashboardLayoutProps } from "../../shared/models/props/dashboard-layout.prop";
 
 const DashboardLayout = ({ children, namespace }: IDashboardLayoutProps) => {
   const t = useTranslations(namespace);

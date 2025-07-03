@@ -1,4 +1,5 @@
 export interface ILocaleLayoutWrapperProps {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
+  messages?: Record<string, string>;
 }
