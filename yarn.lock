@@ -368,6 +368,11 @@
   resolved "https://registry.npmjs.org/@netlify/next/-/next-1.4.9.tgz#50e7bc72f9c5897ffdf1ec10d585a1a3ea15048a"
   integrity sha512-lrbY+CEhS9x0jV7oXVYi/rqxZ6ht5KeLGNZsgIPI34kpDaBuD/EfsyKa28BWeSrFalxRZmkMxQYRSTa82v3roQ==
 
+"@netlify/plugin-nextjs@^5.11.4":
+  version "5.11.4"
+  resolved "https://registry.npmjs.org/@netlify/plugin-nextjs/-/plugin-nextjs-5.11.4.tgz#1aafb8d4bde199f2d243279ca69a456462f66561"
+  integrity sha512-hJJthlDU76wn1vuOF48GiYx7HLhSK0u9xJU7N4BSmOjc741zvI5NgfWlQwfPOydp5OOuoxPDXxbZj9EttBycPw==
+
 "@next/env@15.3.4":
   version "15.3.4"
   resolved "https://registry.npmjs.org/@next/env/-/env-15.3.4.tgz#5b41485596d5bfea0918db73f90b7a6db734da3f"
